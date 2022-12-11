@@ -47,7 +47,7 @@ async function SendMessage(){
             return}
         console.log('Amazon-price:',+obj.price)
 
-        if(+obj.price < 20000){
+        if(+obj.price < 16000){
             sendSMS(obj.productName,obj.price,obj.link)
             }
 

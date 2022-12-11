@@ -86,7 +86,7 @@ async function scrapeFlipkart(){
 
 }scrapeFlipkart()
 
-app.get('/',(req,res)=>{res.json(`totalCallInterval = ${totalCallInterval} ${console.log(totalCallInterval)}`)})
+app.get('/',(req,res)=>{res.json(`totalCallInterval = ${totalCallInterval}`)})
 
 app.listen(process.env.PORT||8000,()=>{
     console.log('server is working on port',process.env.PORT||8000);

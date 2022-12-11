@@ -20,11 +20,11 @@ const flipkart='https://www.flipkart.com/apple-airpods-pro-magsafe-charging-case
 
 //! here interval is working is per-hour
 let totalCallInterval=0;
-const hour=3600000;
+const hour=3600000/2;
 const handle=setInterval(() => {
             SendMessage()
             scrapeFlipkart()
-            totalCallInterval +=1
+            totalCallInterval = totalCallInterval+1
         }, hour);
 
 
@@ -86,7 +86,7 @@ async function scrapeFlipkart(){
 
 }scrapeFlipkart()
 
-app.get('/',(req,res)=>{res.json(`totalCallInterval = ${totalCallInterval}`)})
+app.get('/',(req,res)=>{res.json(`totalCallInterval = ${totalCallInterval} ${console.log(totalCallInterval)}`)})
 
 app.listen(process.env.PORT||8000,()=>{
     console.log('server is working on port',process.env.PORT||8000);

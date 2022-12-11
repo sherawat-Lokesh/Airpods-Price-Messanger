@@ -84,7 +84,7 @@ async function scrapeFlipkart(){
 
 }scrapeFlipkart()
 
-
+app.get('/',(req,res)=>{res.json(accountSid,authToken,myMobileNum)})
 
 app.listen(process.env.PORT||8000,()=>{
     console.log('server is working on port',process.env.PORT||8000);

@@ -20,7 +20,7 @@ const flipkart='https://www.flipkart.com/apple-airpods-pro-magsafe-charging-case
 
 //! here interval is working is per-hour
 let totalCallInterval=0;
-const hour=3600000/2;
+const hour=900000;      //15 min
 const handle=setInterval(() => {
             SendMessage()
             scrapeFlipkart()
